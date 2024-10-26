@@ -1,0 +1,78 @@
+#paragraf {
+  color: brown;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: blue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .link1 {
+  color: red;
+}
+
+.main .title {
+  font-size: 60px;
+  text-align: center;
+}
+
+.main .search {
+  display: flex;
+  justify-content: center;
+}
+
+.main .input {
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
+  border: 3px green dashed;
+  border-radius: 20px;
+}
+
+.main .buton-grup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main .buton {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.35s;
+}
+
+.main .buton:hover {
+  border: 3px solid red;
+}
+
+footer {
+  background-color: gray;
+  padding: 20px;
+}
+
+footer .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .links a {
+  margin: 10px;
+}
