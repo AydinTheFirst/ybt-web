@@ -78,3 +78,7 @@
   - `font-size` Yazı boyutunu kontrol eder.
   - `transition` Animasyonların daha akıcı olmasını sağlar
   - `:hover` Mouse ile element üzerine gelindiğinde elementin davranışlarını kontrol eder
+
+### Kapanış
+
+- [Google](https://google.com) sitesine benzer bir yapı oluşturmak.
