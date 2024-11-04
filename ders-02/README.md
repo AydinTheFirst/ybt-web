@@ -1,5 +1,11 @@
 # Web Programlama - Ders 1
 
+### Hazırlık
+
+- [Node](https://nodejs.org/) kurulumu
+- VSC için eklentiler
+  - Code runner
+
 ### Javascript
 
 - Değişkenler
