@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>JS ile html</title>
+  </head>
+  <body>
+    <h1 id="title">Merhaba dünya</h1>
+
+    <!-- Buton Elementi Tanımı -->
+    <button id="button">Bana Tıkla</button>
+  </body>
+  <script>
+    const button = document.getElementById("button"); // Butonu seç
+
+    // 2 parametre alır, biri event adı, diğeri fonksiyon
+    // callback fonksiyonu
+    // Butona tıklandığında çalışacak fonksiyon
+    button.addEventListener("click", function () {
+      // Butona tıklanınca
+      const title = prompt("Yeni başlık giriniz:"); // Kullanıcıdan başlık al
+      document.getElementById("title").innerText = title; // Başlığı değiştir
+    });
+  </script>
+</html>
