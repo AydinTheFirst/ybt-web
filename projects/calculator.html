@@ -84,7 +84,8 @@
         <button onclick="append('/')">/</button>
       </div>
       <div>
-        <button onclick="clear()">C</button>
+        <button onclick="clearAll()">C</button>
+        <button onclick="clearOne()">Sil</button>
       </div>
     </div>
 
@@ -94,6 +95,18 @@
       let expression = "";
 
       // Fonksiyonların tanımlanması
+
+      // Temizlemek için
+      function clearAll() {
+        expression = "";
+        result.value = expression;
+      }
+
+      // Silmek için
+      function clearOne() {
+        expression = expression.slice(0, -1);
+        result.value = expression;
+      }
 
       // Sayı ve işlem eklemek için
       function append(value) {
@@ -105,12 +118,6 @@
       function calculate() {
         result.value = eval(expression);
         expression = result.value;
-      }
-
-      // Temizlemek için
-      function clear() {
-        expression = "";
-        result.value = "";
       }
     </script>
   </body>
