@@ -1,4 +1,4 @@
-# Web Programlama - Ders 1
+# Web Programlama - Ders 1 (HTML, CSS)
 
 ### Giriş
 

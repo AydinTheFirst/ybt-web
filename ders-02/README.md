@@ -1,4 +1,4 @@
-# Web Programlama - Ders 2
+# Web Programlama - Ders 2 (Javascript)
 
 ### Hazırlık
 
