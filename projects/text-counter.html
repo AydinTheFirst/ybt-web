@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelime Sayacı</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      textarea {
+        width: 300px;
+        padding: 1rem;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        resize: none;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <textarea
+        name="text"
+        id="text"
+        cols="30"
+        rows="10"
+        placeholder="Metni buraya yapıştırın..."
+      ></textarea>
+
+      <p id="count">0 kelime</p>
+    </div>
+
+    <script>
+      const text = document.getElementById("text");
+      const count = document.getElementById("count");
+
+      text.addEventListener("input", () => {
+        const words = text.value
+          // Boşluklara göre ayır
+          .split(" ")
+          // Boşlukları temizle
+          .filter((word) => word !== "");
+
+        count.textContent = `${words.length} kelime`;
+      });
+    </script>
+  </body>
+</html>
