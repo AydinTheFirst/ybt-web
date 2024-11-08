@@ -1,4 +1,4 @@
-# Web Programlama - Ders 1
+# Web Programlama - Ders 2
 
 ### Hazırlık
 
@@ -16,3 +16,5 @@
 - for ile döngü oluşturmak
 - map ve forEach farkı ve kullanımı
 - DOM (Document Object Model) ile html elementlerinin dinamik olarak değiştirmek
+- Event Listener ile butonlara click eventi eklemek
+- Sınıflar ve nesneler
