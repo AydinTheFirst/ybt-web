@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Formu</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      form {
+        width: 300px;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      div {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: #f1356d;
+        color: white;
+        cursor: pointer;
+      }
+
+      #alert {
+        margin-top: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div>
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <button type="submit">Giriş Yap</button>
+
+      <p id="alert"></p>
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+      const alert = document.getElementById("alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form); // FormData objesi oluştur
+        const data = Object.fromEntries(formData); // FormData objesini json'a çevir
+        const { username, password } = data; // Kullanıcı adı ve şifreyi al
+
+        if (username === "admin" && password === "123456") {
+          alert.textContent = "Giriş başarılı!";
+        } else {
+          alert.textContent = "Kullanıcı adı veya şifre hatalı!";
+
+          // 3 saniye sonra uyarıyı kaldır
+          setTimeout(() => {
+            alert.textContent = "";
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>

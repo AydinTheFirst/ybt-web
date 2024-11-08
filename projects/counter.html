@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayaç</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 10px;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: #f1356d;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="count">0</h1>
+      <div class="buttons">
+        <button onclick="increment()">Arttır</button>
+        <button onclick="decrement()">Azalt</button>
+      </div>
+    </div>
+
+    <script>
+      // Değişkenler
+      const count = document.getElementById("count");
+      let counter = 0;
+
+      // Fonksiyonlar
+
+      // Arttırma fonksiyonu
+      function increment() {
+        counter++; // counter = counter + 1;
+        count.innerText = counter;
+      }
+
+      // Azaltma fonksiyonu
+      function decrement() {
+        counter--; // counter = counter - 1;
+        count.innerText = counter;
+      }
+    </script>
+  </body>
+</html>

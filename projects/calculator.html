@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hesap Makinesi</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 400px;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 2rem;
+        text-align: right;
+      }
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+
+      button {
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        background-color: #f1356d;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="result" />
+      <div>
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+      </div>
+      <div>
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('-')">-</button>
+      </div>
+      <div>
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('*')">*</button>
+      </div>
+      <div>
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="append('/')">/</button>
+      </div>
+      <div>
+        <button onclick="clear()">C</button>
+      </div>
+    </div>
+
+    <script>
+      // Değişkenlerin tanımlanması
+      const result = document.getElementById("result");
+      let expression = "";
+
+      // Fonksiyonların tanımlanması
+
+      // Sayı ve işlem eklemek için
+      function append(value) {
+        expression += value;
+        result.value = expression;
+      }
+
+      // Hesaplama yapmak için
+      function calculate() {
+        result.value = eval(expression);
+        expression = result.value;
+      }
+
+      // Temizlemek için
+      function clear() {
+        expression = "";
+        result.value = "";
+      }
+    </script>
+  </body>
+</html>

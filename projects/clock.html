@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saat</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="time">00:00:00</h1>
+
+    <script>
+      // Değişkenler
+      const time = document.getElementById("time");
+
+      // Saat fonksiyonu
+      const showTime = () => {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        time.textContent = `${hours}:${minutes}:${seconds}`;
+      };
+
+      // Saat fonksiyonunu her saniye çalıştır
+      setInterval(showTime, 1000);
+    </script>
+  </body>
+</html>
